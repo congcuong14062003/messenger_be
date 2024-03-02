@@ -25,7 +25,9 @@ app.use(bodyParser.json());
 //set morgan log
 app.use(morgan("dev"));
 
-
+app.get('/', (req,res)=>{
+    res.send("<h1>Chao mung ban den voi binh nguyen vo tan!!!</h1>");
+})
 
 let userOnline = {};
 io.on('connection', (socket) => {
